@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Absolute Position</title>
+    <style>
+        #container {
+            width: 500px; height: 300px;
+            border: 3px solid pink;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .circle {
+            position: absolute;
+            width: 100px; height: 100px; 
+            border-radius: 50% 50%;
+        }
+
+        #aqua {
+            background: aqua;
+            left: 160px; top: 60px;
+        }
+        #orange {
+            background: orange;
+            right: 160px; top: 70px;
+        }
+        #tomato {
+            background: tomato;
+            right: 160px; bottom: 70px;
+        }
+        #purple {
+            background: purple;
+            left: 160px; bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+  <!-- 절대 위치 연습 -->
+    <h1>Circle</h1>
+    <div id="container">
+        <div id="aqua" class="circle"></div>
+        <div id="orange" class="circle"></div>
+        <div id="tomato" class="circle"></div>
+        <div id="purple" class="circle"></div>
+    </div>
+    <h1>Circle</h1>
+</body>
+</html>
