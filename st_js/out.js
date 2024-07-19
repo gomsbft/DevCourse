@@ -1,0 +1,18 @@
+  console.log(1 + 1);
+  console.log(2 * 2);
+  console.log(5 - 2);
+  console.log(8 % 2);
+  console.log(8 / 2);
+  console.log('hello world');
+  console.log("hello world");
+  console.log('"hello world"');
+  console.log("'hello world'"); 
+  console.log('가나다' + '라마바' + '사아자' + '차카타' + '파하');
+  console.log(20 < 10);
+  console.log(20 > 10);
+  console.log(20 === 20);
+  let pi;
+  pi = 3.14159265;
+  console.log(pi);
+  let radius = 10;
+  console.log(2 * radius * pi);
