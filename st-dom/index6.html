@@ -7,9 +7,12 @@
   <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
   <script>
     $(document).ready(function() {
-      //내부 글자 변경
-      $('h1:nth-child(1)').text('<a href="#">tex()</a>');
-      $('h1:nth-child(2)').html('<a href="#">html()</a>');
+      //변수 선언
+      let text = $('h1').text();
+      let html = $('h1').html();
+      //출력
+      alert('text: ' + text);
+      alert('html: ' + html);
       })
   </script>
 </head>
