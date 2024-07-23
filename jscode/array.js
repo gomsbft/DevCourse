@@ -43,3 +43,9 @@ for(let i = 0; i < todos.length; i++) {
 for(const todo of todos) {
   console.log(`오늘의 할 일: ${todo}`);
 }
+
+let i = 0;
+while (i < todos.length) {
+  console.log(`${i}번째 할 일: ${todos[i]}`);
+  i++
+}
