@@ -41,3 +41,19 @@ function earnings(name, wage=9860, hours=40) {
 earnings('구름');
 earnings('별', 10000);
 earnings('하늘', 15000, 50);
+
+//콜백함수, forEach()
+
+let numbers = [273, 52, 103, 32, 57];
+
+numbers.forEach(function(value, index, array) {
+  console.log(`${index}번째 요소: ${value}`)
+})
+
+// map
+
+numbers = numbers.map(function(value, index, array) {
+  return value * value
+})
+
+numbers.forEach(console.log);
