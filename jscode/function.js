@@ -57,3 +57,11 @@ numbers = numbers.map(function(value, index, array) {
 })
 
 numbers.forEach(console.log);
+
+let nums =[0, 1, 2, 3, 4, 5]
+const evenNums = nums.filter(function(value) {
+  return value % 2 == 0
+})
+
+console.log(`원래 배열: ${nums}`);
+console.log(`짝수만 추출: ${evenNums}`);
