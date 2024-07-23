@@ -34,6 +34,12 @@ todos.splice(1, 0, '코딩 공부하기');
 
 console.log(todos);
 
+//배열 반복문 사용
+
 for(let i = 0; i < todos.length; i++) {
   console.log(`${i}번째 할 일: ${todos[i]}`);
+}
+
+for(const todo of todos) {
+  console.log(`오늘의 할 일: ${todo}`);
 }
