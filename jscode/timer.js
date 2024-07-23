@@ -16,3 +16,4 @@ setTimeout(() => {
   console.log('타이머를 종료합니다')
   clearInterval(id)
 }, 5 * 1000)
+

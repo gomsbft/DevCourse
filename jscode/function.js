@@ -71,3 +71,18 @@ console.log(`짝수만 추출: ${evenNums}`);
 //화살표 함수
 
 nums.filter((value) => value % 2 == 0).map((value) => value * value).forEach((value) => console.log(value))
+
+let pi = 3.14;
+console.log(`파이 값은 ${pi}입니다.`);
+{
+  let pi = 3.141592;
+  console.log(`파이 값은 ${pi}입니다.`)
+}
+console.log(`파이 값은 ${pi}입니다.`);
+
+function sample() {
+  let pi = 3.141592;
+  console.log(`파이 값은 ${pi}입니다.`);
+}
+
+sample();
