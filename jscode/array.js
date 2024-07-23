@@ -27,3 +27,13 @@ console.log(indexCheck);
 let indexNoCheck = todos.indexOf('필라테스 수업');
 
 console.log(indexNoCheck);
+
+//특정 위치 요소 추가
+
+todos.splice(1, 0, '코딩 공부하기');
+
+console.log(todos);
+
+for(let i = 0; i < todos.length; i++) {
+  console.log(`${i}번째 할 일: ${todos[i]}`);
+}
