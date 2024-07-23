@@ -9,12 +9,12 @@ for(let i = 0; i < 5; i++) {
 
 console.log(star); */
 
-//star 2번
+/* star 2번
 for(let i = 0; i < 5; i++) {
   console.log('*');
-}
+} */
 
-/*star 4번
+/* star 4번
 
 let star = "";
 
