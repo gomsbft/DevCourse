@@ -64,17 +64,32 @@ for (let i = 1; i <= 5; i++) {
 console.log(star);
 */
 
+/*star 7번
+let star = "";
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < i; j++) {
+    star += ' '
+  }
+  for(let k = 5; k >= i+ 1; k--) {
+    star += '*'
+  }
+  star += '\n'
+}
+
+console.log(star);
+*/
+
 /* star 8번
 let star = "";
 
-for (let i = 1; i < 5 * 2; i += 2) { //열에 대한 지정
-  for (let j = 1; j < ((5 * 2) - i) / 2 ; j++) {
+for(let i = 1; i < 5 * 2; i += 2) { //열에 대한 지정
+  for(let j = 1; j < ((5 * 2) - i) / 2 ; j++) {
     star += " "; // 공백 설정
   }
   for( let l = 1; l <= i; l++){
     star += "*"; // *찍기 설정
   }
-  for (let k = 1; k < ((5 * 2) - i) / 2; k++) {
+  for(let k = 1; k < ((5 * 2) - i) / 2; k++) {
     star += " "; //공백 설정
   }
   star += "\n"; //줄바꿈 설정
@@ -82,9 +97,23 @@ for (let i = 1; i < 5 * 2; i += 2) { //열에 대한 지정
 console.log(star);
 */
 
+/* star 9번
 let star = '';
+
 for(let i = 0; i < 5; i++) {
-  for(let j = 9; j <= 0; j - 2) {
+  for(let j = 1; j <= i; j++) {
+    star += ' '
+  }
+  for(let k = 9; k <= i + 1; k--) {
     star += '*'
   }
+  for(let l = 1; l <= i; l++) {
+    star += ' '
+  }
+  star += '\n'
 }
+
+console.log(star)
+*/
+
+
