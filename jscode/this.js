@@ -84,3 +84,21 @@ console.log('');
 console.log('# 랜덤한 정수 숫자');
 console.log('-5~5 사이의 랜덤한 정수 숫자:', Math.floor(num * 10 - 5)); 
 console.log('-25~25 사이의 랜덤한 정수 숫자:', Math.floor(num * 50 - 25)); 
+
+//다중 할당
+//객체 생성
+const obiect = {
+  names: '혼자 공부하는 파이썬',
+  price: 18000,
+  publisher: '한빛미디어'
+};
+
+//객체에서 변수 추출
+const { names, price } = obiect;
+console.log('#속성 이름 그대로 꺼내서 출력');
+console.log(names, price);
+console.log('');
+
+const { A = names, B = price } = obiect
+console.log('#다른 이름으로 속성 꺼내서 출력');
+console.log(A, B);
