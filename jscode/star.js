@@ -97,32 +97,29 @@ for(let i = 1; i < 5 * 2; i += 2) { //열에 대한 지정
 console.log(star);
 */
 
-/* star 9번
+//star 9번
 let star = '';
 
 for(let i = 0; i < 5; i++) {
-  for(let j = 1; j <= i; j++) {
+  for(let j = 1; j <= i + 1; j++) {
     star += ' '
   }
-  for(let k = 9; k <= i + 1; k--) {
+  for(let k = 7; k > (2 * i); k--) {
     star += '*'
-  }
-  for(let l = 1; l <= i; l++) {
-    star += ' '
   }
   star += '\n'
 }
 
 console.log(star)
-*/
 
-// star 10번
+
+/* star 10번
 let star = '';
 for(let i = 0; i < 5; i++) {
   for(let j = 4; j > i; j--) {
     star += ' '
   }
-  for(let k = 1; k <= i + 1; k++) {
+  for(let k = 1; k <= (2 * i) + 1; k++) {
     star += '*'
   }
 
@@ -132,4 +129,15 @@ for(let i = 0; i < 5; i++) {
   star += '\n'
 }
 
+for(let i = 0; i < 4; i++) {
+  for(let j = 1; j <= i + 1; j++) {
+    star += ' '
+  }
+  for(let k = 7; k > (2 * i); k--) {
+    star += '*'
+  }
+  star += '\n'
+}
+
 console.log(star);
+*/
