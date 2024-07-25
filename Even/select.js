@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   select.addEventListener('change', (e) => {
     const options = e.currentTarget.options
-    const index = e.currentTarget.options.selectedIndex
-
-    p.textContent = `선택: ${options[index].textContent}`
+    const list = [];
+    for (const option of options) {
+      if(option.selected) {
+        list.push(option.textContent)
+      }
+    }
+    p.textContent = `선택: ${list.join(',')}`
   })
 })
