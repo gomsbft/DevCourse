@@ -116,4 +116,20 @@ for(let i = 0; i < 5; i++) {
 console.log(star)
 */
 
+// star 10번
+let star = '';
+for(let i = 0; i < 5; i++) {
+  for(let j = 4; j > i; j--) {
+    star += ' '
+  }
+  for(let k = 1; k <= i + 1; k++) {
+    star += '*'
+  }
 
+  for(let l = 4; l < 0; l--) {
+    star += ' '
+  }
+  star += '\n'
+}
+
+console.log(star);
