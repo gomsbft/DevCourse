@@ -97,7 +97,7 @@ for(let i = 1; i < 5 * 2; i += 2) { //열에 대한 지정
 console.log(star);
 */
 
-//star 9번
+/*star 9번
 let star = '';
 
 for(let i = 0; i < 5; i++) {
@@ -111,7 +111,7 @@ for(let i = 0; i < 5; i++) {
 }
 
 console.log(star)
-
+*/
 
 /* star 10번
 let star = '';
