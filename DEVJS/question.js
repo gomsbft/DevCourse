@@ -1,3 +1,5 @@
+"use strict";
+
 // const number = [20, 37, -21, 32, -2];
 // const num = number.filter(v => v > 30);
 // console.log(num.join(','));
@@ -69,7 +71,14 @@
 // console.log(result);
 
 //위 배열을 이용하여 실행 결과 10, 30, 50을 내시오
-const number = [1, 3, 5];
-for(let i = 0; i < number.length; i++) {
-  console.log(number[i] * 10);
-}
+// const number = [1, 3, 5];
+// for(let i = 0; i < number.length; i++) {
+//   console.log(number[i] * 10);
+// }
+// let numbersArray = number.map(num => num * 10);
+// console.log(numbersArray);
+
+//set 객체의 요소의 개수를 구하시오
+// let set = new Set('i am a student');
+// const {size} = new Set(set);
+// console.log(size);
