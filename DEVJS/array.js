@@ -207,12 +207,21 @@ let carSales = [300, 350, 400, 450, 500, 600, 650, 620, 580, 620, 580, 620];
 // let b = a.includes(false);
 // console.log(b);
 
-let a = ['apple', 'cherry', 'banana'];
-let b = a.sort();
-let c = [22, 333, 121];
-let d = c.sort();
-console.log(d);
-let e = c.sort((a, b) => a - b);
-console.log(b);
-console.log(e);
+// let a = ['apple', 'cherry', 'banana'];
+// let b = a.sort();
+// let c = [22, 333, 121];
+// let d = c.sort();
+// console.log(d);
+// let e = c.sort((a, b) => a - b);
+// console.log(b);
+// console.log(e);
+
+// join()
+// let a = [1, 2, 3];
+// let b = a.join();
+// let c = a.join('');
+// console.log(b);
+// console.log(c);
+
+//다차원 배열
 
