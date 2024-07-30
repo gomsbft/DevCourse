@@ -117,7 +117,7 @@
 
 //forEach
 
-let map = new Map();
-map.set(0, 'zero');
-map.set(1, 'one');
-map.forEach((value, key) => console.log(key, value));
+// let map = new Map();
+// map.set(0, 'zero');
+// map.set(1, 'one');
+// map.forEach((value, key) => console.log(key, value));
