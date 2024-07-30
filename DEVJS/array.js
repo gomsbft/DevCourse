@@ -157,7 +157,7 @@ let carSales = [300, 350, 400, 450, 500, 600, 650, 620, 580, 620, 580, 620];
 // console.log(newArray);
 
 //push() 끝에 추가 / pop() 끝에 요소 삭제
-let stack = [];
+// let stack = [];
 // stack.push(1);
 // stack.push(2, 3);
 // console.log(stack);
@@ -165,8 +165,54 @@ let stack = [];
 // console.log(stack);
 
 //unshift() 첫번째 요소 추가 // shift() 첫번째 요소 삭제
-stack.unshift(1);
-stack.unshift(2, 3);
-console.log(stack);
-stack.shift();
-console.log(stack);
+// stack.unshift(1);
+// stack.unshift(2, 3);
+// console.log(stack);
+// stack.shift();
+// console.log(stack);
+
+//splice()
+// let a = [1, 2, 3, 4, 5];
+// // a.splice(0, 2);
+// // a.splice(2);
+// a.splice(0, 2, 10, 20);
+// console.log(a);
+
+//slice()
+// let b = a.slice(0, 2);
+// let c = a.slice(1, -1);
+// console.log(b);
+// console.log(a);
+// console.log(c);
+
+//fill
+// let a = new Array(5);
+// a.fill(0);
+// a.fill(1, 1);
+// a.fill(1, 1, -1);
+// console.log(a);
+
+//indexOf()
+// let a = [0, 1, 2, 3, 2, 1, 0];
+// let b = a.indexOf(2);
+// let c = a.lastIndexOf(2);
+// let d = a.indexOf(5);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+//includes() / sort()
+
+// let a = [0, true, 2, false, NaN];
+// let b = a.includes(false);
+// console.log(b);
+
+let a = ['apple', 'cherry', 'banana'];
+let b = a.sort();
+let c = [22, 333, 121];
+let d = c.sort();
+console.log(d);
+let e = c.sort((a, b) => a - b);
+console.log(b);
+console.log(e);
+
