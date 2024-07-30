@@ -126,7 +126,47 @@ let carSales = [300, 350, 400, 450, 500, 600, 650, 620, 580, 620, 580, 620];
 
 //reduce()
 
-let sum = carSales.reduce((t1, t2) => t1 + t2, 0);
-console.log(sum);
-let average = sum / carSales.length;
-console.log(average);
+// let sum = carSales.reduce((t1, t2) => t1 + t2, 0);
+// console.log(sum);
+// let average = sum / carSales.length;
+// console.log(average);
+
+// let highest = carSales.reduce((t1, t2) => (t1 > t2 ? t1 : t2));
+// console.log(highest);
+
+// flat()
+// let flat = [1, [2, 3]].flat();
+// console.log(flat);
+
+// flatMap
+// let message = ["오늘은", "비가 옵니다."];
+// let words = message.flatMap(msg => msg.split(""));
+// console.log(words);
+
+//concat()
+
+// const arr1 = ['a', 'b', 'c'];
+// const arr2 = ['d', 'e', 'f'];
+// const arr3 = arr1.concat(arr2);
+// console.log(arr3);
+
+// let original = [1, 2, 3];
+// let newArray;
+// newArray = original.concat(4, 5);
+// newArray = original.concat([4, 5], [6, 7]);
+// console.log(newArray);
+
+//push() 끝에 추가 / pop() 끝에 요소 삭제
+let stack = [];
+// stack.push(1);
+// stack.push(2, 3);
+// console.log(stack);
+// stack.pop();
+// console.log(stack);
+
+//unshift() 첫번째 요소 추가 // shift() 첫번째 요소 삭제
+stack.unshift(1);
+stack.unshift(2, 3);
+console.log(stack);
+stack.shift();
+console.log(stack);
