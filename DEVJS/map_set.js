@@ -69,3 +69,55 @@
 // let difference = new Set([...set1].filter(a => !set2.has(a)));
 // console.log(difference);
 
+// Map 생성
+
+// const map1 = new Map([['key1', 'value1'], ['key2', 'value2']]);
+// console.log(map1);
+
+// const map2 = new Map([[1, 2]]);
+// console.log(map2);
+
+// 중복 요소 요소가 덮어써짐
+// const map = new Map([['key1', 'value1'], ['key1', 'value2']]);
+// console.log(map);
+
+//size
+
+// const {size} = new Map([['key1', 'value1'], ['key2', 'value2']]);
+// console.log(size);
+
+//요소 추가
+// const map = new Map();
+// map.set('key1', 'value1').set('key2', 'value2');
+// console.log(map);
+
+// 키 타입에 제한 없음
+// const map = new Map();
+// const lee = {name: 'lee'};
+// const kim = {name: 'kim'};
+// map.set(lee, 'developer').set(kim, 'designer');
+// console.log(map);
+
+//delete 메서드
+// const map = new Map();
+// const lee = {name: 'lee'};
+// const kim = {name: 'kim'};
+// map.set(lee, 'developer').set(kim, 'designer');
+// console.log(map.delete(kim));
+// console.log(map.has(kim));
+// console.log(map);
+
+//clear 언제나 undefined 반환
+// const map = new Map();
+// const lee = {name: 'lee'};
+// const kim = {name: 'kim'};
+// map.set(lee, 'developer').set(kim, 'designer');
+// map.clear();
+// console.log(map);
+
+//forEach
+
+let map = new Map();
+map.set(0, 'zero');
+map.set(1, 'one');
+map.forEach((value, key) => console.log(key, value));

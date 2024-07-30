@@ -82,3 +82,26 @@
 // let set = new Set('i am a student');
 // const {size} = new Set(set);
 // console.log(size);
+
+//세 과목 성적의 합계와 평균을 구하시오
+
+// const map = new Map();
+// let sum = 0;
+// map.set('국어', 85).set('영어', 90).set('수학', 95);
+// map.forEach((value, key) => {
+//   sum += value;
+// });
+// console.log(sum);
+// console.log(sum / 3);
+
+//Map 객체 요소를 forEach() 메서드로 다음의 실행 결과를 만드시오
+// const map = new Map();
+// map.set('title', '유럽 책방 문화 탐구').set('author', '한미화').set('price', 23000);
+// map.forEach((value, key) => {
+//   console.log(`${key}: ${value}`);
+// })
+
+//set을 이용하여 배열에서 중복 요소를 제거하여 결과를 내시오
+const numbers = [3, 7, 12, 3, 12, 3];
+const set = new Set(numbers);
+console.log(set);
