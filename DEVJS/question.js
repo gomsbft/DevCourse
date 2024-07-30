@@ -36,19 +36,40 @@
 //   for(let j = 0; j < 4; j++) {
 //     sum += scores[i][j];
 //   }
-//   average = sum / 4;
-//   text += i + '번째 학생의 합계: ' + sum + ', 평균: ' + average;
+//  
 // }
+// console.log(i + '번째 학생의 합계: ' + sum + ', 평균: ' + sum /4);
 
 // console.log(text);
 
 //배열을 이용하여 성적의 합계와 평균을 구하시오
 
-const mathScores = [90, 85, 70, 86, 97];
-let sum = 0;
-for(let i = 0; i < mathScores.length; i++) {
-  sum += mathScores[i];
-}
+// const mathScores = [90, 85, 70, 86, 97];
+// let sum = 0;
+// for(let i = 0; i < mathScores.length; i++) {
+//   sum += mathScores[i];
+// }
+// for(let mathScores of mathScores) {
+//   sum += mathScores;
+// }
 
-console.log('성적 합계: ' + sum);
-console.log('성적 평균: ' + sum / 5);
+// console.log('성적 합계: ' + sum);
+// console.log('성적 평균: ' + sum / 5);
+
+//0보다 작은 . 수중에 가장 첫 번째 숫자를 결과로 나타내시오
+// const tempNumbers = [7, -24, -8, 10, 17, -18];
+// let a = tempNumbers.find(a => a < 0);
+// console.log(a);
+
+// 두 배열의 요소 값이 서로 같은 요소들로 새로운 배열을 생성하여 결과로 내시오
+// const a = [12, 0, 2, 5, 4];
+// const b = [0, 2, 3, 12, 8];
+
+// let result = a.filter(a => b.includes(a));
+// console.log(result);
+
+//위 배열을 이용하여 실행 결과 10, 30, 50을 내시오
+const number = [1, 3, 5];
+for(let i = 0; i < number.length; i++) {
+  console.log(number[i] * 10);
+}
