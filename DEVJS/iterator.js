@@ -16,6 +16,11 @@
 // let copy = [...iterator];
 // console.log(copy);
 
+
+
+
+
+
 class Sequence {
   constructor(from = 0, to = Infinity, interval = 1) {
     this.from = from;
@@ -41,14 +46,14 @@ let iterator = evenNumbers[Symbol.iterator]();
 let result = iterator.next();
 console.log(result);
 
-while(!result.done) {
-  console.log(result.value);
-  result = iterator.next();
-}
+// while(!result.done) {
+//   console.log(result.value);
+//   result = iterator.next();
+// }
 
-for(let num of evenNumbers) {
-  if(num > 7) {
-    break;
-  }
-  console.log(num);
-}
+// for(let num of evenNumbers) {
+//   if(num > 7) {
+//     break;
+//   }
+//   console.log(num);
+// }

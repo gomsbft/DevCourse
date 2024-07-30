@@ -102,6 +102,6 @@
 // })
 
 //set을 이용하여 배열에서 중복 요소를 제거하여 결과를 내시오
-const numbers = [3, 7, 12, 3, 12, 3];
-const set = new Set(numbers);
-console.log(set);
+// const numbers = [3, 7, 12, 3, 12, 3];
+// const set = new Set(numbers);
+// console.log(set);
