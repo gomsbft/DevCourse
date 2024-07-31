@@ -172,30 +172,52 @@
  //나는 실패...
 
  //풀이
-let success = false;
+// let success = false;
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if(success) {
-      resolve(5);
-    }else {
-      reject("에러");
-    }
-  }, 1000)
-});
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if(success) {
+//       resolve(5);
+//     }else {
+//       reject("에러");
+//     }
+//   }, 1000)
+// });
 
-promise.then(
-  num => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(num * 10);
-      }, 1500);
+// promise.then(
+//   num => {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve(num * 10);
+//       }, 1500);
+//     })
+//   }
+// )
+// .then(result => {
+//   console.log(result);
+// })
+// .catch(error => {
+//   console.log(error);
+// })
+
+//제너레이터를 사용하여 여러 비동기 작업을 순차적으로 실행하는 함수를 작성하세요 
+//각 작업은 2초 후에 완료 된다고 가정하고 작업으 완료 될때마다 그 결과를 출력해야 합니다
+//제너레이터는 작업이 완료 될때마다 다음 작업을 실행해야 합니다
+async function* asyncSequence(from = 0, to = Infinity, interval = 1, timeout = 2000) {
+  let next = from;
+  while(next <= to) {
+    yield new Promise((resolve, reject) => {
+      setTimeout(() => resolve(next), timeout);
     })
+    yield new Promise((resolve, reject) => {
+      setTimeout(() => resolve(next), timeout);
+    })
+    next += interval;
   }
-)
-.then(result => {
-  console.log(result);
-})
-.catch(error => {
-  console.log(error);
-})
+}
+(async() => {
+  let seq = asyncSequence(2, 10 ,2);
+  for await (let value of seq) {
+    console.log(value);
+  }
+})();

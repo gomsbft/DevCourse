@@ -77,8 +77,8 @@ async function* asyncSequence(from = 0, to = Infinity, interval = 1, timeout = 1
   while(next <= to) {
     yield new Promise((resolve, reject) => {
       setTimeout(() => resolve(next), timeout);
-      next += interval;
     })
+    next += interval;
   }
 }
 (async() => {
