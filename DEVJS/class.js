@@ -44,19 +44,88 @@
 // me.sayHi();
 // Person.sayHello();
 
-const Person = (function() {
-  function Person(name) {
-    this.name = name;
-  };
-  Person.prototype.sayHi = function() {
-    console.log('hi ' + this.name);
-  };
-  Person.sayHello = function() {
-    console.log("hello");
-  };
-  return Person;
-}());
-const me = new Person('lee');
-console.log(me.name);
-me.sayHi();
-Person.sayHello();
+// const Person = (function() {
+//   function Person(name) {
+//     this.name = name;
+//   };
+//   Person.prototype.sayHi = function() {
+//     console.log('hi ' + this.name);
+//   };
+//   Person.sayHello = function() {
+//     console.log("hello");
+//   };
+//   return Person;
+// }());
+// const me = new Person('lee');
+// console.log(me.name);
+// me.sayHi();
+// Person.sayHello();
+
+//정적 메서드
+// class Square {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+//   area() {
+//     return this.width * this.height;
+//   }
+//   static areas(width, height) {
+//     return width * height;
+//   }
+// }
+// const square = new Square(10, 10);
+// console.log(square.area());
+// console.log(Square.areas(20, 10));
+
+
+// const Person = {
+//   firstName: "jiwon",
+//   lastName: 'Han',
+
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`
+//   },
+//   set fullName(name) {
+//     [this.firstName, this.lastName] = name.split('');
+//   }
+// }
+// console.log(Person.fullName);
+
+// class Person {
+//   #name = '';
+//   constructor(name) {
+//     this.#name = name
+//   };
+//   get name() {
+//     return this.#name.trim();
+//   };
+// }
+// const me = new Person('Lee');
+// console.log(me.name);
+
+class Vehicle {
+  constructor(name, wheel) {
+    this.name = name
+    this.wheel = wheel
+  }
+}
+const myVehicle = new Vehicle('자전거', 2);
+console.log(myVehicle);
+
+class Bicycle extends Vehicle {
+  constructor(name, wheel) {
+    super(name, wheel)
+  }
+}
+const myBicycle = new Bicycle('따릉이', 2);
+console.log(myBicycle);
+
+class Car extends Vehicle {
+  constructor(name, wheel, license) {
+    super(name, wheel)
+    this.license = license
+  }
+}
+const myCar = new Car('벤틀리', 4, true);
+console.log(myCar);
