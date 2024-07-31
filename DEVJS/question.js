@@ -130,19 +130,72 @@
 
 //풀이
 
-const promiseA = new Promise((resolve, reject) => {
+// const promiseA = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("A");
+//   }, 1000)
+// })
+
+// const promiseB = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("B");
+//   }, 2000)
+// })
+
+// let promises = [promiseA, promiseB];
+// Promise.all(promises).then((result) => {
+//   console.log("완료", result);
+// })
+
+//1초 후에 숫자 5를 반환하는 promise와 1.5초 후에 그 숫자에 10을 곱한 값을 반환하는 promise를 작성하세요
+//만약 5를 반환하는 promise가 실패하면 "에러!"를 출력하세요
+
+// function num() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(5)
+//     }, 1000)
+//   })
+// }
+
+// function renum(num) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout((num) => {
+//       resolve(num * 10)
+//     }, 1500)
+//   })
+// }
+
+// num()
+//  .then(renum)
+//  .catch(console.log("실패!"))
+ //나는 실패...
+
+ //풀이
+let success = false;
+
+const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("A");
+    if(success) {
+      resolve(5);
+    }else {
+      reject("에러");
+    }
   }, 1000)
-})
+});
 
-const promiseB = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("B");
-  }, 2000)
+promise.then(
+  num => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(num * 10);
+      }, 1500);
+    })
+  }
+)
+.then(result => {
+  console.log(result);
 })
-
-let promises = [promiseA, promiseB];
-Promise.all(promises).then((result) => {
-  console.log("완료", result);
+.catch(error => {
+  console.log(error);
 })
