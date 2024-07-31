@@ -203,21 +203,91 @@
 //제너레이터를 사용하여 여러 비동기 작업을 순차적으로 실행하는 함수를 작성하세요 
 //각 작업은 2초 후에 완료 된다고 가정하고 작업으 완료 될때마다 그 결과를 출력해야 합니다
 //제너레이터는 작업이 완료 될때마다 다음 작업을 실행해야 합니다
-async function* asyncSequence(from = 0, to = Infinity, interval = 1, timeout = 2000) {
-  let next = from;
-  while(next <= to) {
-    yield new Promise((resolve, reject) => {
-      setTimeout(() => resolve(next), timeout);
-    })
-    yield new Promise((resolve, reject) => {
-      setTimeout(() => resolve(next), timeout);
-    })
-    next += interval;
+// async function* asyncSequence(from = 0, to = Infinity, interval = 1, timeout = 2000) {
+//   let next = from;
+//   while(next <= to) {
+//     yield new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(next), timeout);
+//     })
+//     yield new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(next), timeout);
+//     })
+//     next += interval;
+//   }
+// }
+// (async() => {
+//   let seq = asyncSequence(2, 10 ,2);
+//   for await (let value of seq) {
+//     console.log(value);
+//   }
+// })();
+
+//풀이
+// function* taskGen() {
+//   yield new Promise((resolve, reject) => setTimeout(() => resolve("1완료"), 2000));
+//   yield new Promise((resolve, reject) => setTimeout(() => resolve("2완료"), 2000));
+//   yield new Promise((resolve, reject) => setTimeout(() => resolve("3완료"), 2000));
+// }
+
+// const tasksDisplay = async () => {
+//   const tasks = taskGen();
+//   for(let task of tasks) {
+//     const result = await task;
+//     console.log(result);
+//   }
+// }
+// tasksDisplay();
+
+//사용자의 정보를 가져오는 비동기 함수를 작성하고, 이를 어싱크,어웨이를 사용하여 호출
+
+// const users = {
+//   1: {name: "Kim", age: 25},
+//   2: {name: "Lee", age: 30},
+//   3: {name: "jung", age: 35}
+// }
+
+// async function say(users) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(users), 1000)
+//   })
+// }
+// async function display() {
+//   try {
+//     let result = await say();
+//     console.log(result);
+//   } catch(e) {
+//     console.log(e);
+//   }
+// }
+// 실패
+
+//풀이
+
+function userData(userId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const users = {
+        1: {name: "Kim", age: 25},
+        2: {name: "Lee", age: 30},
+        3: {name: "jung", age: 35}
+      }
+      const user = users[userId];
+      if(user) {
+        resolve(user);
+      }else {
+        reject("사용자를 찾을 수 없음");
+      }
+    }, 1000);
+  })
+}
+
+async function getUser(userId) {
+  try{
+    const userDataGet = await userData(userId);
+    console.log(`${userDataGet.name}, ${userDataGet.age}`);
+  }catch(e) {
+    console.log(e);
   }
 }
-(async() => {
-  let seq = asyncSequence(2, 10 ,2);
-  for await (let value of seq) {
-    console.log(value);
-  }
-})();
+
+getUser(4);
