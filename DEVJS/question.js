@@ -304,3 +304,6 @@ function Book(title, author, price) {
 Book.prototype.year = "1994";
 Book.prototype.page = 360;
 
+const book = new Book('코딩', '너무', '어려워');
+console.log(book);
+
