@@ -105,3 +105,5 @@
 // const numbers = [3, 7, 12, 3, 12, 3];
 // const set = new Set(numbers);
 // console.log(set);
+
+//1초 후에 "A"를, 2초 후에 "B"를 반환하는 
