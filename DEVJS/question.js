@@ -106,4 +106,43 @@
 // const set = new Set(numbers);
 // console.log(set);
 
-//1초 후에 "A"를, 2초 후에 "B"를 반환하는 
+//1초 후에 "A"를, 2초 후에 "B"를 반환하는 두개의 Promise를 생성하고  두Promise가 모두 완료 된 후에 "완료!"를 출력
+
+// function a() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(console.log("A"))
+//     }, 1000)
+//   })
+// }
+
+// function b() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(console.log("B"))
+//     }, 2000)
+//   })
+// }
+
+// a()
+//   .then(b)
+//   .finally(console.log("완료!"));
+
+//풀이
+
+const promiseA = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("A");
+  }, 1000)
+})
+
+const promiseB = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("B");
+  }, 2000)
+})
+
+let promises = [promiseA, promiseB];
+Promise.all(promises).then((result) => {
+  console.log("완료", result);
+})
