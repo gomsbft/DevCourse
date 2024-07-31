@@ -263,31 +263,44 @@
 
 //풀이
 
-function userData(userId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const users = {
-        1: {name: "Kim", age: 25},
-        2: {name: "Lee", age: 30},
-        3: {name: "jung", age: 35}
-      }
-      const user = users[userId];
-      if(user) {
-        resolve(user);
-      }else {
-        reject("사용자를 찾을 수 없음");
-      }
-    }, 1000);
-  })
+// function userData(userId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const users = {
+//         1: {name: "Kim", age: 25},
+//         2: {name: "Lee", age: 30},
+//         3: {name: "jung", age: 35}
+//       }
+//       const user = users[userId];
+//       if(user) {
+//         resolve(user);
+//       }else {
+//         reject("사용자를 찾을 수 없음");
+//       }
+//     }, 1000);
+//   })
+// }
+
+// async function getUser(userId) {
+//   try{
+//     const userDataGet = await userData(userId);
+//     console.log(`${userDataGet.name}, ${userDataGet.age}`);
+//   }catch(e) {
+//     console.log(e);
+//   }
+// }
+
+// getUser(4);
+
+//Book 이라는 생성자 함수를 만들고 프로토타입을 이용하여 프로퍼티를 추가하세요
+//(title, author, price) /생성할 프로토타입 예) 출판일, 페이지 수
+
+function Book(title, author, price) {
+  this.title = title,
+  this.author = author,
+  this.price = price
 }
 
-async function getUser(userId) {
-  try{
-    const userDataGet = await userData(userId);
-    console.log(`${userDataGet.name}, ${userDataGet.age}`);
-  }catch(e) {
-    console.log(e);
-  }
-}
+Book.prototype.year = "1994";
+Book.prototype.page = 360;
 
-getUser(4);
