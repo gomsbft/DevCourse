@@ -104,28 +104,47 @@
 // const me = new Person('Lee');
 // console.log(me.name);
 
-class Vehicle {
-  constructor(name, wheel) {
-    this.name = name
-    this.wheel = wheel
-  }
-}
-const myVehicle = new Vehicle('자전거', 2);
-console.log(myVehicle);
 
-class Bicycle extends Vehicle {
-  constructor(name, wheel) {
-    super(name, wheel)
-  }
-}
-const myBicycle = new Bicycle('따릉이', 2);
-console.log(myBicycle);
+//super
+// class Vehicle {
+//   constructor(name, wheel) {
+//     this.name = name
+//     this.wheel = wheel
+//   }
+// }
+// const myVehicle = new Vehicle('자전거', 2);
+// console.log(myVehicle);
 
-class Car extends Vehicle {
-  constructor(name, wheel, license) {
-    super(name, wheel)
-    this.license = license
-  }
-}
-const myCar = new Car('벤틀리', 4, true);
-console.log(myCar);
+// class Bicycle extends Vehicle {
+//   constructor(name, wheel) {
+//     super(name, wheel)
+//   }
+// }
+// const myBicycle = new Bicycle('따릉이', 2);
+// console.log(myBicycle);
+
+// class Car extends Vehicle {
+//   constructor(name, wheel, license) {
+//     super(name, wheel)
+//     this.license = license
+//   }
+// }
+// const myCar = new Car('벤틀리', 4, true);
+// console.log(myCar);
+
+// class Base {
+//   constructor(name) {
+//     this.name = name
+//   }
+//   sayHi() {
+//     return `Hi ${this.name}. 잘 지냈니?`;
+//   }
+// }
+
+// class Derived extends Base {
+//   sayHi() {
+//     return `${super.sayHi()}`
+//   }
+// }
+// const derived = new Derived('Lee');
+// console.log(derived.sayHi());
