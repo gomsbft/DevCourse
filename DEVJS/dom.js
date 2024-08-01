@@ -49,14 +49,14 @@
 // })
 
 const box = document.querySelector(".box");
-const init = {x: 0, y: 0};
+// const init = {x: 0, y: 0};
 const offset = {x: 0, y: 0};
 
-const move = e => {
-  offset.x = e.clientX - init.x;
-  offset.y = e.clientY - init.y;
-  box.style.transform = `translate3d(${offset.x}px, ${offset.y}px, 0)`
-};
+// const move = e => {
+//   offset.x = e.clientX - init.x;
+//   offset.y = e.clientY - init.y;
+//   box.style.transform = `translate3d(${offset.x}px, ${offset.y}px, 0)`;
+// };
 
 // box.addEventListener('mousedown', e => {
 //   init.x = e.clientX - offset.x;
@@ -69,9 +69,20 @@ const move = e => {
 //   document.removeEventListener('mousemove', move);
 // });
 
-box.addEventListener('click', e => {
-  init.x = e.clientX - offset.x;
-  init.y = e.clientY - offset.y;
+  document.addEventListener('click', e => {
+    const boxWidth = box.offsetWidth;
+    const boxHeight = box.offsetHeight;
 
-  document.addEventListener('mousemove', move)
+    const newX = e.clientX - boxWidth / 2;
+    const newY = e.clientY - boxHeight / 2;
+
+    // init.x = e.clientX - offset.x;
+    // init.y = e.clientY - offset.y;
+    // offset.x = e.clientX - init.x;
+    // offset.y = e.clientY - init.y;
+    offset.x = newX;
+    offset.y = newY;
+    box.style.transform = `translate3d(${offset.x}px, ${offset.y}px, 0)`;
+
+  // document.addEventListener('mousemove', move)
 })
