@@ -22,12 +22,22 @@
 //   console.log(`hi ${name}`)
 // }
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', function add() {
-  console.log('click!');
-  button.removeEventListener('click', add);
-});
+// const handleClick = () => console.log('button click');
+
+// button.onclick = handleClick;
+
+// button.removeEventListener('click', handleClick);
+
+// button.onclick  = 'null';
+
+
+// button.addEventListener('click', function add() {
+//   console.log('click!');
+//   button.removeEventListener('click', add);
+// });
+
 
 // const handleClick = () => console.log('button Click');
 
@@ -43,3 +53,11 @@ button.addEventListener('click', function add() {
 // button.addEventListener('click', function() {
 //   console.log('button clicked 2');
 // })
+
+
+const msg = document.querySelector('.message');
+
+function showCoords(e) {
+  msg.textContent = `clientX ${e.clientX}, clientY: ${e.clientY}`
+}
+// document.onclick = showCoords;
