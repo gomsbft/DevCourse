@@ -24,10 +24,22 @@
 
 const button = document.querySelector('button');
 
-button.addEventListener('click', function() {
-  console.log('button clicked 1');
-})
+button.addEventListener('click', function add() {
+  console.log('click!');
+  button.removeEventListener('click', add);
+});
 
-button.addEventListener('click', function() {
-  console.log('button clicked 2');
-})
+// const handleClick = () => console.log('button Click');
+
+// button.addEventListener('click', handleClick);
+
+// button.removeEventListener('click', handleClick);
+
+
+// button.addEventListener('click', function() {
+//   console.log('button clicked 1');
+// })
+
+// button.addEventListener('click', function() {
+//   console.log('button clicked 2');
+// })
