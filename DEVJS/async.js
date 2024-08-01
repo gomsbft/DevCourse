@@ -1,3 +1,4 @@
+"use strict";
 // let sayHello = async () => "안녕"
 
 const { reject } = require("async");

@@ -1,3 +1,4 @@
+"use strict";
 // function callback() {
 //   console.log('콜백 함수 호출');
 // }

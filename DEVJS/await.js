@@ -1,3 +1,4 @@
+"use strict";
 // async function sayHello() {
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => resolve("안녕"), 1000)

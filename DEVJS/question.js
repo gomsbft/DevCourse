@@ -295,15 +295,86 @@
 //Book 이라는 생성자 함수를 만들고 프로토타입을 이용하여 프로퍼티를 추가하세요
 //(title, author, price) /생성할 프로토타입 예) 출판일, 페이지 수
 
-function Book(title, author, price) {
-  this.title = title,
-  this.author = author,
-  this.price = price
-}
+// function Book(title, author, price) {
+//   this.title = title,
+//   this.author = author,
+//   this.price = price
+// }
 
-Book.prototype.year = "1994";
-Book.prototype.page = 360;
+// Book.prototype.year = "1994";
+// Book.prototype.page = 360;
 
-const book = new Book('코딩', '너무', '어려워');
-console.log(book);
+// const book = new Book('코딩', '너무', '어려워');
+// console.log(book);
 
+//person이라는 클래스를 만들고
+//"안녕하세요. 제 이름은 {이름}이고, 나이는{나이}살 입니다. 라는 문자열을 반환하시오"
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   sayHi() {
+//     console.log(`안녕하세요. 제 이름은 ${this.name}이고, 나이는 ${this.age}살 입니다.`)
+//   }
+// }
+
+// const me = new Person('jiwon', 30);
+// me.sayHi();
+
+//풀이
+// class Preson {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   text() {
+//     return `안녕하세요. 제 이름은 ${this.name}이고, 나이는 ${this.age}살 입니다.`
+//   }
+// }
+// const person1 = new Preson('jiwon', 30);
+// console.log(person1.text());
+
+//calculator라는 클래스 또는 생성자 함수를 작성하고 정적 메서드를 추가하여 숫자를 더하고 빼는 기능을 구현하시오
+// class Calaculator {
+//   constructor(num1, num2) {
+//     this.num1 = num1;
+//     this.num2 = num2;
+//   }
+//   static sum(num1, num2) {
+//     return num1 + num2;
+//   }
+//   static mi(num1, num2) {
+//     return num1 - num2;
+//   }
+// }
+// const result = new Calaculator(10, 5);
+// console.log(Calaculator.sum(10, 5));
+// console.log(Calaculator.mi(10, 5));
+
+//풀이
+//class 이용
+// class Calaculator {
+//   static add(a, b) {
+//     return a + b;
+//   }
+//   static sub(a, b) {
+//     return a - b;
+//   }
+// }
+
+// console.log(Calaculator.add(1, 3));
+// console.log(Calaculator.sub(1, 3));
+
+//생성자함수 이용
+function Calaculator() {}
+  Calaculator.add = function(a, b) {
+    return a + b;
+  }
+  Calaculator.sub = function(a, b) {
+    return a - b;
+  }
+
+console.log(Calaculator.add(2, 5));
+console.log(Calaculator.sub(2, 5));

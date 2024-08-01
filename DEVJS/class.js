@@ -1,3 +1,4 @@
+"use strict";
 //생성자 함수
 
 // function Point(x, y) {
