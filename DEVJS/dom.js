@@ -27,15 +27,15 @@
 //   boxEl.classList.add(`order-${index + 1}`);
 // })
 
-const fruit = document.getElementById('fruit');
+const fruits = document.getElementById('fruits');
 
 function activate({target}) {
-  if(!target.matches('#fruits > li')) return;
-  [...fruit.children].forEach(fruit => {
+  // if(!target.matches('#fruits > li')) return;
+  [...fruits.children].forEach(fruit => {
     fruit.classList.toggle('active', fruit === target)
   })
 }
-// document.getElementById('apple').onclick = activate;
-// document.getElementById('banana').onclick = activate;
-// document.getElementById('cheryy').onclick = activate;
-fruit.onclick = activate;
+document.getElementById('apple').onclick = activate;
+document.getElementById('banana').onclick = activate;
+document.getElementById('cherry').onclick = activate;
+// fruit.onclick = activate;
