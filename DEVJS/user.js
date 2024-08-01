@@ -2,14 +2,35 @@ const id = document.querySelector("#id");
 const pw = document.querySelector("#pw");
 const pwch = document.querySelector("#pwCh");
 
-function idch() {
-  let id = document.getElementById('id').value;
-  let pw = document.getElementById('pw').value;
+id.onchange = checkId;
+pw.onchange = checkPw;
+pwch.onchange = comPw;
 
-  if(pw.length < 1) {
-    document.getElementsByClassName('textCh').innerHTML = '비밀번호를 입력해 주세요';
-  }else if(pw.length < 8) {
-    document.getElementsByClassName('textCh').innerHTML = '비밀번호는 8자 이상 입력해주세요';
+function checkId() {
+  let ids = document.querySelector("#id").value
+  let pws = document.querySelector("#pw").value
+  if(ids.length < 4 || ids.length > 15) {
+    document.getElementById("textCh").innerHTML = "4~15자리의 영문과 숫자를 사용하세요"
   }
+  if(pw.value.length < 8) {
+    document.getElementById("textCh").innerHTML = "비밀번호는 8자리 이상이여야 합니다."
+    pw.value = "";
+    pw.focus();
+  }
+}
 
+function checkPw() {
+  if(pw.value.length < 8) {
+    alert("비밀번호는 8자리 이상이여야 합니다.");
+    pw.value = "";
+    pw.focus();
+  }
+}
+
+function comPw() {
+  if(pw.value != pwch.value) {
+    alert("암호가 다릅니다, 다시 입력해주세요");
+    pw.focus();
+    comPw.value = "";
+  }
 }

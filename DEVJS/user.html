@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
-  <script src="user.js"></script>
+  <script defer src="user.js"></script>
   <link rel="stylesheet" href="user.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
         <li>
           <label class="field" for="pwCh">비밀번호 확인</label>
           <input type="password" class="input-box" id="pwCh" name="pwCh">
-          <p class="textCh"></p>
+          <p class="textCh" id="textCh"></p>
         </li>
         <li>
           <label for="field" class="check">메일 수신</label>
@@ -42,7 +42,7 @@
     </form>
   </main>
   <footer class="footer">
-    <button type="submit" class="footerBtn" id="inside" onclick="idCh()">가입하기</button>
+    <button type="submit" class="footerBtn" id="inside" onclick="checkId()">가입하기</button>
     <button type="button" class="footerBtn">취소</button>
   </footer>
 </body>

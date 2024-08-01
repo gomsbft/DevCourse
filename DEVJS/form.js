@@ -38,26 +38,33 @@
 //   }, 2000)
 // }
 
-const x = document.getElementById("name");
-x.onfocus = function() {changeBgcolorFo();}
-x.onblur = function() {changeBgcolorBl();}
+// const x = document.getElementById("name");
+// x.onfocus = function() {changeBgcolorFo();}
+// x.onblur = function() {changeBgcolorBl();}
 
-function changeBgcolorFo() {
-  x.style.backgroundColor = "pink";
-}
-function changeBgcolorBl() {
-  x.style.backgroundColor = "gray";
-}
+// function changeBgcolorFo() {
+//   x.style.backgroundColor = "pink";
+// }
+// function changeBgcolorBl() {
+//   x.style.backgroundColor = "gray";
+// }
 
 
-const keyInput = document.getElementById("key-input");
+// const keyInput = document.getElementById("key-input");
 // let text = "";
 // keyInput.addEventListener("keydown", showKey );
 // function showKey(e) {
 //   text += e.key;
 //   document.getElementById("show").innerHTML = text;
 // }
-keyInput.addEventListener("keyup", changeUpper);
-function changeUpper() {
-  keyInput.value = keyInput.value.toUpperCase();
-}
+// keyInput.addEventListener("keyup", changeUpper);
+// function changeUpper() {
+//   keyInput.value = keyInput.value.toUpperCase();
+// }
+
+// //셀렉트
+// const selectFruits = document.getElementById("selectFru");
+// selectFruits.addEventListener("change", (e) => {
+//   document.getElementById("show").innerHTML = "내가 좋아하는 과일은 " + e.target.value + " 입니다."
+// })
+
