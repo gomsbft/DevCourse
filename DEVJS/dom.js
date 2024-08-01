@@ -48,4 +48,30 @@
 //   })
 // })
 
+const box = document.querySelector(".box");
+const init = {x: 0, y: 0};
+const offset = {x: 0, y: 0};
 
+const move = e => {
+  offset.x = e.clientX - init.x;
+  offset.y = e.clientY - init.y;
+  box.style.transform = `translate3d(${offset.x}px, ${offset.y}px, 0)`
+};
+
+// box.addEventListener('mousedown', e => {
+//   init.x = e.clientX - offset.x;
+//   init.y = e.clientY - offset.y;
+
+//   document.addEventListener('mousemove', move);
+// });
+
+// document.addEventListener('mouseup', () => {
+//   document.removeEventListener('mousemove', move);
+// });
+
+box.addEventListener('click', e => {
+  init.x = e.clientX - offset.x;
+  init.y = e.clientY - offset.y;
+
+  document.addEventListener('mousemove', move)
+})
