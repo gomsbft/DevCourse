@@ -11,29 +11,53 @@
 //   document.getElementById('show').innerHTML = text;
 // }
 
-function myFunction() {
-  let id = document.getElementById('id').value;
-  let pw = document.getElementById('pass').value;
+// function myFunction() {
+//   let id = document.getElementById('id').value;
+//   let pw = document.getElementById('pass').value;
 
-  if(pw.length < 1) {
-    document.getElementById('show').innerHTML = '비밀번호를 입력해 주세요';
-  }else if(pw.length > 8) {
-    document.getElementById('show').innerHTML = '비밀번호는 8자 이하로 입력해주세요';
-  }
+//   if(pw.length < 1) {
+//     document.getElementById('show').innerHTML = '비밀번호를 입력해 주세요';
+//   }else if(pw.length > 8) {
+//     document.getElementById('show').innerHTML = '비밀번호는 8자 이하로 입력해주세요';
+//   }
 
-  if(id.length < 1) {
-    document.getElementById('show').innerHTML = '아이디를 입력해 주세요'
-  }else if(id.length > 8) {
-    document.getElementById('show').innerHTML = '아이디는 8자 이하로 입력해주세요';
-  }
+//   if(id.length < 1) {
+//     document.getElementById('show').innerHTML = '아이디를 입력해 주세요'
+//   }else if(id.length > 8) {
+//     document.getElementById('show').innerHTML = '아이디는 8자 이하로 입력해주세요';
+//   }
 
-  if(pw.length > 0 && pw.length <= 8 && id.length > 0 && id <= 8) {
-    document.getElementById('show').innerHTML = '입력 OK';
-  }
+//   if(pw.length > 0 && pw.length <= 8 && id.length > 0 && id.length <= 8) {
+//     document.getElementById('show').innerHTML = '입력 OK';
+//   }
 
-  ["id", "pass"].forEach(field => documen.getElementById(field).value = "");
+//   ["id", "pass"].forEach(field => documen.getElementById(field).value = "");
 
-  setTimeout(() => {
-    document.getElementById('show').innerHTML= "";
-  }, 2000)
+//   setTimeout(() => {
+//     document.getElementById('show').innerHTML= "";
+//   }, 2000)
+// }
+
+const x = document.getElementById("name");
+x.onfocus = function() {changeBgcolorFo();}
+x.onblur = function() {changeBgcolorBl();}
+
+function changeBgcolorFo() {
+  x.style.backgroundColor = "pink";
+}
+function changeBgcolorBl() {
+  x.style.backgroundColor = "gray";
+}
+
+
+const keyInput = document.getElementById("key-input");
+// let text = "";
+// keyInput.addEventListener("keydown", showKey );
+// function showKey(e) {
+//   text += e.key;
+//   document.getElementById("show").innerHTML = text;
+// }
+keyInput.addEventListener("keyup", changeUpper);
+function changeUpper() {
+  keyInput.value = keyInput.value.toUpperCase();
 }

@@ -1,0 +1,30 @@
+
+.main-form {
+  display: flex;
+  justify-content: center;
+}
+
+.main-list {
+  list-style: none;
+  text-align: end;
+}
+
+li {
+  padding-top: 10px;
+}
+
+.input-box {
+  width: 200px;
+  height: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footerBtn {
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <script src="user.js"></script>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <header>
+    <h1 class="header_txt">회원가입</h1>
+  </header>
+  <main>
+    <form name="user" class="main-form">
+      <ul class="main-list">
+        <li>
+          <label class="field" for="id">아이디</label>
+          <input type="text" class="input-box" id="id" name="id" placeholder="4~15자리의 영문과 숫자로 입력">
+        </li>
+        <li>
+          <label class="field" for="email">이메일</label>
+          <input type="email" class="input-box" id="email" name="email">
+        </li>
+        <li>
+          <label class="field" for="pw">비밀번호</label>
+          <input type="password" class="input-box" id="pw" name="pw" placeholder="8자리 이상">
+        </li>
+        <li>
+          <label class="field" for="pwCh">비밀번호 확인</label>
+          <input type="password" class="input-box" id="pwCh" name="pwCh">
+          <p class="textCh"></p>
+        </li>
+        <li>
+          <label for="field" class="check">메일 수신</label>
+          <input type="radio" id="emailIn" name="emailIn" value="emailCh">
+          <label for="emailChOk" class="emailOk">예</label>
+          <input type="radio" id="emailIn" name="emailIn" value="emailCh">
+          <label for="emailChNo" class="emailNO">아니오</label>
+        </li>
+      </ul>
+    </form>
+  </main>
+  <footer class="footer">
+    <button type="submit" class="footerBtn" id="inside" onclick="idCh()">가입하기</button>
+    <button type="button" class="footerBtn">취소</button>
+  </footer>
+</body>
+</html>
