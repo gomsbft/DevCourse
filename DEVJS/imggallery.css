@@ -10,6 +10,11 @@
 
 #container > img {
   width: 100%;
+  display: none;
+}
+
+#container > img.active {
+  display: block;
 }
 
 button {
