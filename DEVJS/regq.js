@@ -29,3 +29,15 @@ let i = "89139012349";
 let j = /[^1-8]/g
 let result5 = i.match(j);
 document.getElementById("show").innerHTML = result5;
+
+//문제6 A가 최소 1번 최되 2번 반복되는 문자를 구하세요
+let k = "A AA B BB Aa Bb AAA";
+let l = /A{2, }/g
+let result6 = k.match(l);
+document.getElementById("show").innerHTML = result6;
+
+//문제 7 한번 이상 연속되는 숫자 출력
+let m = "AA BB 12 345";
+let n = /[0-9]+/g
+let result7 = m.match(n);
+document.getElementById("show").innerHTML = result7;
