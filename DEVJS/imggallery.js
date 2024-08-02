@@ -23,7 +23,7 @@ function prevSlide() {
 }
 
 function nextSlide() {
-  if(current < slides.length - 2) {
+  if(current < slides.length - 1) {
     current += 1;
   }else {
     current = slides[0];
