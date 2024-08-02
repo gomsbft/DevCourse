@@ -1,0 +1,14 @@
+#gallery {
+  margin: 200px 20px;
+}
+
+.minions {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+img {
+  margin: 10px;
+}

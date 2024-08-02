@@ -27,16 +27,16 @@ containers.forEach((container) => {
 
 function getDragAferElement(container, x) {
   const draggableElements = [
-    ...container.querySelectorAll(".draggable:not(.dragging")
+    ...container.querySelectorAll(".draggable:not(.dragging)")
   ];
 
   return draggableElements.reduce((child) => {
     const box = child.getBoundingClientRect();
     const offset = x - box.left - box.width / 2;
-    if(offset < 0 && offset > closeset.offset) {
+    if(offset < 0 && offset > closest.offset) {
       return { offset: offset, element: child};
     }else {
-      return closeset;
+      return closest;
     }
 
   }, {offset: Number.NEGATIVE_INFINITY}).element;
