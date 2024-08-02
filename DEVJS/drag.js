@@ -47,4 +47,11 @@ document.getElementById("appendChildBtn").onclick = function() {
   parent.appendChild(newElement);
 }
 
-document.getElementById("insertBeforeBtn")
+document.getElementById("insertBeforeBtn").onclick = function() {
+  const parentEl = document.getElementById("parent");
+  const newEl = document.createElement("div");
+  newEl.textContent = "New child";
+
+  const reference = document.getElementById("reference");
+  parentEl.insertBefore(newEl, reference);
+}
