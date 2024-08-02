@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>drag</title>
   <script defer src="drag.js"></script>
+  <link rel="stylesheet" href="drag.css">
 </head>
 <body>
-  <div onclick="console.log('div 입니다')">
-    <p onclick="console.log('p 입니다')">
-      <img src="https://img.freepik.com/premium-photo/alpine-meadow-atmospheric-landscape-majestic-nature-scenic-mountainscape-wonderful-wild-scenery_158388-2222.jpg?w=1800" alt="" onclick="console.log('img입니다')">
-    </p>
+  <div class="container">
+    <button draggable="true" class="item">1</button>
   </div>
+  <div class="container2"></div>
+  
+  <div id="parent">
+    <div>child 1</div>
+    <div>child 2</div>
+  </div>
+  <button id="appendChildBtn">appendChild</button>
 </body>
 </html>
