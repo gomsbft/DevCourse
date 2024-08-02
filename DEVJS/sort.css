@@ -2,12 +2,20 @@
   display: flex;
 }
 
-.culumn {
+.column {
   background-color: #ccc;
   padding: 5px;
+  margin: 10px;
 }
 
-.culumn h1 {
+.column h1 {
   text-align: center;
   font-size: 20px;
+}
+
+.list-group-item {
+  background-color: gray;
+  margin: 20px;
+  padding: 20px;
+
 }
