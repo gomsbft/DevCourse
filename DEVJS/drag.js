@@ -38,3 +38,13 @@ container2.addEventListener("dragover", (e) => {
 container2.addEventListener("drop", (e) => {
   console.log('2번 박스 영역에 드롭');
 })
+
+
+document.getElementById("appendChildBtn").onclick = function() {
+  const parent = document.getElementById("parent");
+  const newElement = document.createElement("div");
+  newElement.textContent = "New Child";
+  parent.appendChild(newElement);
+}
+
+document.getElementById("insertBeforeBtn")
