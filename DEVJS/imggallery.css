@@ -1,0 +1,21 @@
+.wrapper {
+  width: 750px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#container {
+  position: absolute;
+}
+
+#container > img {
+  width: 100%;
+}
+
+#prev {
+
+}
+
+#next {
+  
+}

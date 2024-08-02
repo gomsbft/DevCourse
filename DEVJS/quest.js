@@ -1,42 +1,28 @@
-const dragble = document.querySelectorAll(".minions");
-const contain = document.querySelectorAll("img");
+const gallery = document.getElementById("gallery");
+const images = gallery.querySelectorAll("img");
+let dragImage = null;
 
-dragble.forEach((draggable) => {
-  draggable.addEventListener("dragstart", () => {
-    draggable.classList.add("droing");
+images.forEach((image) => {
+
+  image.addEventListener("dragstart", () => {
+    image.classList.add("dragging");
+    dragImage = image;
   });
 
-  draggable.addEventListener("dragend", () => {
-    draggable.classList.remove("droing")
+  image.addEventListener("dragend", () => {
+    image.classList.remove("dragging");
   });
-})
 
-contain.forEach((container) => {
-  container.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    const after = getafer(container, e.clientX);
-    const draggable = document.querySelector("droing");
-    if(after === undefined) {
-      container.append(draggable);
-    }else {
-      container.insertBefore(draggable, after);
+  image.addEventListener("dragover", (e) => {
+    e.preventDefault;
+    console.log("움직인다");
+  });
+
+  image.addEventListener("drop", (e) => {
+    e.preventDefault;
+    if(dragImage !== image) {
+      gallery.insertBefore(dragImage, image)
     }
-  })
+  });
+
 })
-
-function getafer(container, x) {
-  const dragEl = [
-    ...container.querySelectorAll(".dragble:not(.droing)")
-  ];
-
-  return dragEl.reduce((child) => {
-    const box = child.getBoundingClientRect();
-    const offset = x - box.left - box.width / 2;
-    
-    if(offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child };
-    }else {
-      return closest;
-    }
-  }, {offset: Number.NEGATIVE_INFINITY}).element;
-}
