@@ -2,9 +2,9 @@ import _ from "lodash"
 // import cube from "./modules.js"
 // console.log(cube(2, 4));
 
-import * as R from "./modules.js"
-import myData from "./myData.json"
-import axios from "axios"
+// import * as R from "./modules.js"
+// import myData from "./myData.json"
+// import axios from "axios"
 
 // console.log(myData);
 // const user = {
@@ -146,3 +146,5 @@ import axios from "axios"
 //   })
 // }
 // getMovies();
+
+//자전거 지도 만들기
