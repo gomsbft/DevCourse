@@ -19387,19 +19387,49 @@ function getName() {
   return "aaa";
 }
 ;
+},{}],"myData.json":[function(require,module,exports) {
+module.exports = {
+  "string": "mini",
+  "number": 123,
+  "boolean": true,
+  "object": {},
+  "array": []
+};
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash"));
 var R = _interopRequireWildcard(require("./modules.js"));
+var _myData = _interopRequireDefault(require("./myData.json"));
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 // import cube from "./modules.js"
 // console.log(cube(2, 4));
 
-console.log(R.arrs);
-console.log(R.getName());
+// console.log(myData);
+var user = {
+  name: "mini",
+  age: 20,
+  emails: ["123@naver.com", "kim@hanmail.net"]
+};
+// console.log(user);
+// const str = JSON.stringify(user);
+// console.log(str);
+// const obj = JSON.parse(str);
+// console.log(obj);
+
+// localStorage.setItem('user', JSON.stringify(user));
+// console.log(localStorage.getItem('user'));
+// console.log(JSON.parse(localStorage.getItem('user')));
+var str = localStorage.getItem('user');
+var obj = JSON.parse(str);
+obj.age = 22;
+console.log(obj);
+localStorage.setItem('user', JSON.stringify(obj));
+
+// console.log(R.arrs);
+// console.log(R.getName());
 
 // const user = {
 //   name: "mini",
@@ -19497,7 +19527,7 @@ console.log(R.getName());
 // ]
 // console.log(_.filter(mySister, {age: 22, name: 'kim'}));
 // console.log(_.filter(mySister, sister => sister.age === 22));
-},{"lodash":"node_modules/lodash/lodash.js","./modules.js":"modules.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"lodash":"node_modules/lodash/lodash.js","./modules.js":"modules.js","./myData.json":"myData.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -19522,7 +19552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57730" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61655" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -3,9 +3,34 @@ import _ from "lodash"
 // console.log(cube(2, 4));
 
 import * as R from "./modules.js"
+import myData from "./myData.json"
 
-console.log(R.arrs);
-console.log(R.getName());
+// console.log(myData);
+// const user = {
+//   name: "mini",
+//   age: 20,
+//   emails: [
+//     "123@naver.com",
+//     "kim@hanmail.net"
+//   ]
+// }
+// console.log(user);
+// const str = JSON.stringify(user);
+// console.log(str);
+// const obj = JSON.parse(str);
+// console.log(obj);
+
+// localStorage.setItem('user', JSON.stringify(user));
+// console.log(localStorage.getItem('user'));
+// console.log(JSON.parse(localStorage.getItem('user')));
+// const str = localStorage.getItem('user');
+// const obj = JSON.parse(str);
+// obj.age = 22;
+// console.log(obj);
+// localStorage.setItem('user', JSON.stringify(obj));
+
+// console.log(R.arrs);
+// console.log(R.getName());
 
 // const user = {
 //   name: "mini",
