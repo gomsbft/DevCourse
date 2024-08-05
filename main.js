@@ -148,3 +148,12 @@ import _ from "lodash"
 // getMovies();
 
 //자전거 지도 만들기
+const API_KEY = "70544d6945676f6d313034616d415652"
+async function getData() {
+  const url = `http://openapi.seoul.go.kr:8088/${API_KEY}/json/bikeList/1/10/`
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+}
+
+getData();
