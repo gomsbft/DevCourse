@@ -19376,17 +19376,30 @@ var define;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = _default;
-function _default(a, b) {
-  return a + b;
+exports.arrs = void 0;
+exports.getName = getName;
+// export default function(a, b) {
+//   return a + b
+// }
+
+var arrs = exports.arrs = [10, 20, 30, 40];
+function getName() {
+  return "aaa";
 }
+;
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash"));
-var _modules = _interopRequireDefault(require("./modules.js"));
+var R = _interopRequireWildcard(require("./modules.js"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-console.log((0, _modules.default)(2, 4));
+// import cube from "./modules.js"
+// console.log(cube(2, 4));
+
+console.log(R.arrs);
+console.log(R.getName());
 
 // const user = {
 //   name: "mini",
@@ -19509,7 +19522,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55950" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57730" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

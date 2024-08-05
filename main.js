@@ -1,7 +1,11 @@
 import _ from "lodash"
-import cube from "./modules.js"
+// import cube from "./modules.js"
+// console.log(cube(2, 4));
 
-console.log(cube(2, 4));
+import * as R from "./modules.js"
+
+console.log(R.arrs);
+console.log(R.getName());
 
 // const user = {
 //   name: "mini",
