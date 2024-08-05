@@ -1,10 +1,13 @@
 import _ from "lodash"
+import cube from "./modules.js"
 
-const user = {
-  name: "mini",
-  age : 30,
-  email: ["123@naver.com"]
-}
+console.log(cube(2, 4));
+
+// const user = {
+//   name: "mini",
+//   age : 30,
+//   email: ["123@naver.com"]
+// }
 // const copyUser = user;
 // console.log(copyUser === user);
 
@@ -88,11 +91,12 @@ const user = {
 // console.log(_.every(myFriend, ['active', false]));
 // console.log(_.every(myFriend, 'active'));
 
-let mySister = [
-  {name: 'kim', age: 22, city: 'seoul'},
-  {name: 'Lee', age: 22, city: 'Daegu'},
-  {name: 'Lee', age: 24, city: 'Busan'},
-  {name: 'Park', age: 25, city: 'seoul'}
-]
-console.log(_.filter(mySister, {age: 22, name: 'kim'}));
-console.log(_.filter(mySister, sister => sister.age === 22));
+// let mySister = [
+//   {name: 'kim', age: 22, city: 'seoul'},
+//   {name: 'Lee', age: 22, city: 'Daegu'},
+//   {name: 'Lee', age: 24, city: 'Busan'},
+//   {name: 'Park', age: 25, city: 'seoul'}
+// ]
+// console.log(_.filter(mySister, {age: 22, name: 'kim'}));
+// console.log(_.filter(mySister, sister => sister.age === 22));
+

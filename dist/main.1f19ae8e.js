@@ -19370,16 +19370,29 @@ var define;
   }
 }.call(this));
 
-},{"buffer":"node_modules/buffer/index.js"}],"main.js":[function(require,module,exports) {
+},{"buffer":"node_modules/buffer/index.js"}],"modules.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _default;
+function _default(a, b) {
+  return a + b;
+}
+},{}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash"));
+var _modules = _interopRequireDefault(require("./modules.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var user = {
-  name: "mini",
-  age: 30,
-  email: ["123@naver.com"]
-};
+console.log((0, _modules.default)(2, 4));
+
+// const user = {
+//   name: "mini",
+//   age : 30,
+//   email: ["123@naver.com"]
+// }
 // const copyUser = user;
 // console.log(copyUser === user);
 
@@ -19463,31 +19476,15 @@ var user = {
 // console.log(_.every(myFriend, ['active', false]));
 // console.log(_.every(myFriend, 'active'));
 
-var mySister = [{
-  name: 'kim',
-  age: 22,
-  city: 'seoul'
-}, {
-  name: 'Lee',
-  age: 22,
-  city: 'Daegu'
-}, {
-  name: 'Lee',
-  age: 24,
-  city: 'Busan'
-}, {
-  name: 'Park',
-  age: 25,
-  city: 'seoul'
-}];
-console.log(_lodash.default.filter(mySister, {
-  age: 22,
-  name: 'kim'
-}));
-console.log(_lodash.default.filter(mySister, function (sister) {
-  return sister.age === 22;
-}));
-},{"lodash":"node_modules/lodash/lodash.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// let mySister = [
+//   {name: 'kim', age: 22, city: 'seoul'},
+//   {name: 'Lee', age: 22, city: 'Daegu'},
+//   {name: 'Lee', age: 24, city: 'Busan'},
+//   {name: 'Park', age: 25, city: 'seoul'}
+// ]
+// console.log(_.filter(mySister, {age: 22, name: 'kim'}));
+// console.log(_.filter(mySister, sister => sister.age === 22));
+},{"lodash":"node_modules/lodash/lodash.js","./modules.js":"modules.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -19512,7 +19509,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57773" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55950" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
