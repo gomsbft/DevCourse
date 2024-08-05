@@ -4,6 +4,7 @@ import _ from "lodash"
 
 import * as R from "./modules.js"
 import myData from "./myData.json"
+import axios from "axios"
 
 // console.log(myData);
 // const user = {
@@ -129,3 +130,19 @@ import myData from "./myData.json"
 // console.log(_.filter(mySister, {age: 22, name: 'kim'}));
 // console.log(_.filter(mySister, sister => sister.age === 22));
 
+// function getMovies() {
+//   axios
+//   .get('http://www.omdbapi.com/?apikey=7035c60c&s=PARASITE')
+//   .then((response) => {
+//     console.log(response);
+//     const h1El = document.querySelector('h1');
+//     const imgEl = document.querySelector('img');
+//     const typeEl = document.querySelector(".type");
+//     const yearEl = document.querySelector(".year");
+//     h1El.textContent = response.data.Search[0].Title;
+//     imgEl.src = response.data.Search[0].Poster;
+//     typeEl.textContent = response.data.Search[0].Type;
+//     yearEl.textContent = response.data.Search[0].Year;
+//   })
+// }
+// getMovies();
