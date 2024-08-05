@@ -368,13 +368,27 @@
 // console.log(Calaculator.sub(1, 3));
 
 //생성자함수 이용
-function Calaculator() {}
-  Calaculator.add = function(a, b) {
-    return a + b;
-  }
-  Calaculator.sub = function(a, b) {
-    return a - b;
-  }
+// function Calaculator() {}
+//   Calaculator.add = function(a, b) {
+//     return a + b;
+//   }
+//   Calaculator.sub = function(a, b) {
+//     return a - b;
+//   }
 
-console.log(Calaculator.add(2, 5));
-console.log(Calaculator.sub(2, 5));
+// console.log(Calaculator.add(2, 5));
+// console.log(Calaculator.sub(2, 5));
+
+//다음 객체 Car를 스프레드 연산자를 사용하여 복사하고, model을 "전기차" 로 수정한 새로운 객체 newCar를 
+//생성하는 코드를 작성
+const car = { brand: "현대", model: "아이오닉", year: 2023};
+const newCar = {...car, model: "전기차"};
+console.log(newCar);
+
+//다음 두 배열 array1과 array2를 스프레드 연산자를 사용하여 하나의 배열로 합친 후
+// 중복된 값을 제거한 배열을 출력하는 코드를 작성하세요
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [4, 5, 6, 7, 8];
+const sumArray =[...array1, ...array2];
+const array4 = [...new Set(sumArray)];
+console.log(array4);
