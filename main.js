@@ -1,10 +1,10 @@
 import _ from "lodash"
-// import cube from "./modules.js"
+import cube from "./modules.js"
 // console.log(cube(2, 4));
 
-// import * as R from "./modules.js"
-// import myData from "./myData.json"
-// import axios from "axios"
+import * as R from "./modules.js"
+import myData from "./myData.json"
+import axios from "axios"
 
 // console.log(myData);
 // const user = {
@@ -130,30 +130,47 @@ import _ from "lodash"
 // console.log(_.filter(mySister, {age: 22, name: 'kim'}));
 // console.log(_.filter(mySister, sister => sister.age === 22));
 
-// function getMovies() {
-//   axios
-//   .get('http://www.omdbapi.com/?apikey=7035c60c&s=PARASITE')
-//   .then((response) => {
-//     console.log(response);
-//     const h1El = document.querySelector('h1');
-//     const imgEl = document.querySelector('img');
-//     const typeEl = document.querySelector(".type");
-//     const yearEl = document.querySelector(".year");
-//     h1El.textContent = response.data.Search[0].Title;
-//     imgEl.src = response.data.Search[0].Poster;
-//     typeEl.textContent = response.data.Search[0].Type;
-//     yearEl.textContent = response.data.Search[0].Year;
-//   })
-// }
-// getMovies();
+function getMovies(title) {
+  axios
+  .get(`http://www.omdbapi.com/?apikey=7035c60c&s=${title}`)
+  .then((response) => {
+    console.log(response);
+    const results = document.getElementById('results');
+
+    if(response.data.Search && response.data.Search.length > 0) {
+      const movies = response.data.Search.slice(1, 10);
+      movies.forEach((movie) => {
+        const movieEl = document.createElement('div'); 
+        const h1El = document.createElement('h1');
+        const imgEl = document.createElement('img');
+        const typeEl = document.createElement("p");
+        const yearEl = document.createElement("p");
+
+        h1El.textContent = movie.Title;
+        imgEl.src = movie.Poster;
+        yearEl.textContent = movie.Year;
+        typeEl.textContent = movie.Type;
+
+        movieEl.appendChild(h1El);
+        movieEl.appendChild(imgEl);
+        movieEl.appendChild(yearEl);
+        movieEl.appendChild(typeEl);
+        results.appendChild(movieEl);
+      })
+    }else {
+
+    }
+  })
+}
+getMovies();
 
 //자전거 지도 만들기
-const API_KEY = "70544d6945675652"
-async function getData() {
-  const url = `http://openapi.seoul.go.kr:8088/${API_KEY}/json/bikeList/1/10/`
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-}
+// const API_KEY = "70544d6945675652"
+// async function getData() {
+//   const url = `http://openapi.seoul.go.kr:8088/${API_KEY}/json/bikeList/1/10/`
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   console.log(data);
+// }
 
-getData();
+// getData();
