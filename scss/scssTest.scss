@@ -1,0 +1,67 @@
+$c: #ccc;
+$w: #fff;
+$t: #333;
+
+@mixin card-style($padding: 15px, $margin-bottom: 20px, $border-radius: 5px) {
+  border: 1px solid $c;
+  border-radius: $border-radius;
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+}
+
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  background-color: $c;
+  .container {
+    $size: 20px;
+    padding: $size;
+
+    .header {
+      background-color: green;
+      color: $w;
+      padding: 20px;
+    }
+
+    .nav {
+      @include flex-container(row, flex-start, center);
+      background-color: $t;
+      padding: 20px;
+
+      .nav-item {
+        color: $w;
+        margin: 0 15px;
+      }
+    }
+
+    .content {
+      background-color: $w;
+      padding: 20px;
+
+      .card {
+        @include card-style();
+
+        .card-title {
+          font-size: 20px;
+          color: $t;
+          margin-bottom: 10px;
+        }
+
+        .card-description {
+          font-size: 14px;
+          color: $t;
+        }
+      }
+    }
+    .footer {
+      background-color: $t;
+      color: $w;
+      padding: 10px;
+    }
+  }
+}

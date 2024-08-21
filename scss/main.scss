@@ -1,0 +1,58 @@
+$color: #ccc;
+
+
+ @mixin box($size: 100px, $color: blue) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+ }
+
+
+.container {
+  h1 {
+    color: $color;
+  }
+
+  li {
+    list-style: none;
+    .name {
+      color: lightcoral;
+      font-size: 50px;
+    }
+
+    .age{
+      color: lightgreen;
+      font-size: 30px;
+    }
+  }
+
+  .plus {
+    &-small {
+      font-size: 30px;
+    }
+    &-large {
+      font-size: 50px;
+    }
+    &-m {
+      color: red;
+    }
+  }
+
+  .box {
+    font: {
+      weight : 700;
+      size: 50px;
+    };
+  }
+
+  .boxwrap {
+    width: 30px + 20px;
+    height: 30px;
+    background-color: gray;
+  }
+
+  .box2 {
+    @include box(200px, red)
+  }
+
+}

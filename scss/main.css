@@ -1,0 +1,37 @@
+.container h1 {
+  color: #ccc;
+}
+.container li {
+  list-style: none;
+}
+.container li .name {
+  color: lightcoral;
+  font-size: 50px;
+}
+.container li .age {
+  color: lightgreen;
+  font-size: 30px;
+}
+.container .plus-small {
+  font-size: 30px;
+}
+.container .plus-large {
+  font-size: 50px;
+}
+.container .plus-m {
+  color: red;
+}
+.container .box {
+  font-weight: 700;
+  font-size: 50px;
+}
+.container .boxwrap {
+  width: 50px;
+  height: 30px;
+  background-color: gray;
+}
+.container .box2 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

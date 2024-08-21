@@ -1,0 +1,47 @@
+body {
+  background-color: #ccc;
+}
+body .container {
+  padding: 20px;
+}
+body .container .header {
+  background-color: green;
+  color: #fff;
+  padding: 20px;
+}
+body .container .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+body .container .nav .nav-item {
+  color: #fff;
+  margin: 0 15px;
+}
+body .container .content {
+  background-color: #fff;
+  padding: 20px;
+}
+body .container .content .card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+body .container .content .card .card-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+body .container .content .card .card-description {
+  font-size: 14px;
+  color: #333;
+}
+body .container .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}/*# sourceMappingURL=scssTest.css.map */
