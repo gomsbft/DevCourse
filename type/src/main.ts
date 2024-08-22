@@ -546,3 +546,13 @@ const product2:Product = {
 // type Never = New<number>;
 // type Arr = New<string>
 
+//문제 7
+
+//배열의 첫번째 요소를 반환하는 제네릭 함수를 작성하세요
+
+//정답
+
+
+
+//문제 8
+//length 속성을 가진 객체만을 받는 제네릭 함수를 작성하세요
