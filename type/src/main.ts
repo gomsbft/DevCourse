@@ -574,3 +574,19 @@ function big<T extends number>(a: T, b: T): T {
   return a > b  ? a : b;
 }
 console.log(big(10, 20));
+
+//문제 10
+// IsString<T> 타입을 구현 T가 string 타입이라면 true 반환 아니면 false 반환
+
+// type IsString<T> = T extends string ? true : false
+
+//정답
+// type IsString<T> = T extends string ? true : false;
+// type Test1 = IsString<string>;
+// type Test2 = IsString<number>;
+
+// 문제 11
+//StringS<T> 타입을 구현 T가 유니온 타입일 경우 string 타입인 요소만 추출하여 반환
+
+type StringS<T> = T extends string ? T : never;
+type Test1 = StringS<'a' | 1 | true>;
