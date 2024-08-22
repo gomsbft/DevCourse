@@ -81,10 +81,12 @@
 //   const error = e as Error;
 //   console.log(error.message);
 // }
-let name1 = "kim";
-function add(a, b) {
-    return a + b;
-}
-function isEven(num) {
-    return num % 2 === 0;
-}
+// let name1 = "kim";
+// function add(a, b) {
+//     return a + b;
+// }
+// function isEven(num) {
+//     return num % 2 === 0;
+// }
+
+
