@@ -511,3 +511,38 @@ const product2:Product = {
 // }
 // const savedValues = values(['a', 'b', 'c']);
 // savedValues.hasValue("x");
+
+//컨디셔널 타입
+// type A1 = string;
+// type B1 = A1 extends string ? number : boolean;
+
+// type A2 = number;
+// type B2 = A2 extends string ? number : boolean;
+
+// interface X {
+//   x: number;
+// }
+
+// interface XY {
+//   x: number,
+//   y: number
+// }
+
+// interface YX extends X {
+//   y: number;
+// }
+
+// type A = XY extends X  ? string : number;
+// type B = YX extends X ? string : number;
+
+// type Result = [1] extends number[] ? true : false
+
+// type Start = string | number;
+// type New = Start extends string | number ? Start[] : never;
+// let n: New = ['hi'];
+// n = [123];
+
+// type New<A> = A extends string | number ? string[] : never;
+// type Never = New<number>;
+// type Arr = New<string>
+
