@@ -551,8 +551,26 @@ const product2:Product = {
 //배열의 첫번째 요소를 반환하는 제네릭 함수를 작성하세요
 
 //정답
-
-
+function firstEl<T>(arr: T[]): T {
+  return  arr[0]
+}
+console.log(firstEl([1, 2, 3]))
 
 //문제 8
 //length 속성을 가진 객체만을 받는 제네릭 함수를 작성하세요
+//정답
+
+function leng<T extends {length: number}>(item: T) {
+  console.log(item.length)
+}
+leng('hello');
+
+//문제 9
+// 두 값을 받아서 그 중 큰 값을 반환하는 제네릭 함수를 작성하세요
+
+//정답
+
+function big<T>(a: T, b: T): T {
+  return a > b  ? a : b;
+}
+console.log(big(10, 20));
