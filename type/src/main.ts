@@ -570,7 +570,7 @@ leng('hello');
 
 //정답
 
-function big<T>(a: T, b: T): T {
+function big<T extends number>(a: T, b: T): T {
   return a > b  ? a : b;
 }
 console.log(big(10, 20));
