@@ -952,3 +952,15 @@
 //   firstName: 'jiwon',
 //   lastName: 'han'
 // }
+
+interface Cat {
+  age: number;
+  breed: string;
+}
+
+type CatName = 'a' | 'b' | 'c'
+const cats: Record<CatName, Cat> = {
+  a: {age: 10, breed: 'b'},
+  b: {age: 10, breed: 'b'},
+  c: {age: 10, breed: 'b'},
+}
