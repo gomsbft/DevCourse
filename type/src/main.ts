@@ -726,21 +726,34 @@
 // }
 
 
-interface Human {
-  name: string;
-  age: number;
-  married: boolean;
-  work?: boolean;
-}
+// interface Human {
+//   name: string;
+//   age: number;
+//   married: boolean;
+//   work?: boolean;
+// }
 
-class Person implements Human {
-  name;
-  age;
-  married;
+// class Person implements Human {
+//   name;
+//   age;
+//   married;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name,
+//     this.age = age,
+//     this.married = married;
+//   }
+// }
+
+
+class Person{
+  name?: string;
+  readonly age: number;
+  protected married: boolean;
+  private value: number;
   constructor(name: string, age: number, married: boolean) {
-    this.name = name,
-    this.age = age,
+    this.name = name;
+    this.age = age;
     this.married = married;
+    this.value = 0;
   }
 }
-
