@@ -745,33 +745,70 @@
 // }
 
 
-class Person{
-  name?: string;
-  readonly age: number;
-  protected married: boolean;
-  private value: number;
-  constructor(name: string, age: number, married: boolean) {
-    this.name = name;
-    this.age = age;
-    this.married = married;
-    this.value = 0;
+// class Person{
+//   name?: string;
+//   readonly age: number;
+//   protected married: boolean;
+//   private value: number;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.married = married;
+//     this.value = 0;
+//   }
+//   changeAge(age: number) {
+//     this.age = age;
+//   }
+// }
+// class Child extends Person {
+//   constructor(name: string, age: number, married: boolean) {
+//     super(name, age, married);
+//   }
+//   sayName() {
+//     console.log(this.name);
+//   }
+//   sayValue() {
+//     console.log(this.value);
+//   }
+// }
+
+// const child = new Child("kim", 25, false);
+// child.name;
+// child.married;
+
+// interface Human {
+//   name: string;
+//   age: number;
+//   married: boolean;
+// }
+
+// class Person implements Human {
+//   name;
+//   protected age;
+//   private married;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.married = married;
+//   }
+// }
+
+//오버라이드
+
+class Human {
+  play() {
+    console.log('play');
   }
-  changeAge(age: number) {
-    this.age = age;
-  }
-}
-class Child extends Person {
-  constructor(name: string, age: number, married: boolean) {
-    super(name, age, married);
-  }
-  sayName() {
-    console.log(this.name);
-  }
-  sayValue() {
-    console.log(this.value);
+  study() {
+    console.log('study');
   }
 }
 
-const child = new Child("kim", 25, false);
-child.name;
-child.married;
+class Employee extends Human {
+  work() {
+    console.log('work');
+  }
+  override study() {
+    console.log('study');
+  }
+}
