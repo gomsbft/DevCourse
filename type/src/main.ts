@@ -978,3 +978,12 @@
 
 // const a: ReturnType<typeof fn> = "hello"
 // const b: ReturnType<typeof fn> = 123
+
+//Mapped types
+// type Users = 'kim' | 'lee' | 'park'
+// type UserName = {[K in Users]: string}
+// const userNameInfo = {
+//   kim: 'kim',
+//   lee: 'lee',
+//   park: 'park'
+// }
