@@ -692,13 +692,36 @@
 //   ]
 // }
 
-//문제
+//문제12
 //removeD 메서드 구현, 배열의 중복된 요소 제거, 중복이 제거된 새로운 배열 반환
 //제네릭 사용하여 다양한 타입의 배열에 대해 작동할 수 있도록 만듦
 
-//나의 답
-function removeD<T, A>(a: T, b: A[]) {
-  return ["string"]
-}
+//정답
+// function removeD<T>(arr: T[]): T[] {
+//   return Array.from(new Set(arr));
+// }
+// const arr1 = [1, 1, 1, 2, 3, 2, 3];
+// const arrNum = removeD(arr1)
+
+//문제13
+//배열의 길이를 반환하거나, 문자열의 길이를 반환하는 오버로딩 함수를 작성
 
 //정답
+// function leng(str: string): number;
+// function leng(arr: any[]): number;
+// function leng(a: any): number {
+//   return a.length
+// }
+
+
+class Person {
+  name: string;
+  age: number;
+  married: boolean;
+  constructor(name: string, age: number, married: boolean) {
+    this.name = name,
+    this.age = age,
+    this.married = married;
+  }
+}
+
