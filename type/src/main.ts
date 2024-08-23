@@ -713,11 +713,30 @@
 //   return a.length
 // }
 
+//클래스
+// class Person {
+//   name: string;
+//   age: number;
+//   married: boolean;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name,
+//     this.age = age,
+//     this.married = married;
+//   }
+// }
 
-class Person {
+
+interface Human {
   name: string;
   age: number;
   married: boolean;
+  work?: boolean;
+}
+
+class Person implements Human {
+  name;
+  age;
+  married;
   constructor(name: string, age: number, married: boolean) {
     this.name = name,
     this.age = age,
