@@ -911,3 +911,15 @@
 // const all: Address = {email: 'abc@abc.com', address: 'abc'};
 
 //pick
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+
+type TodoPreview = Pick<Todo, 'title' | 'completed'>
+
+const todo: TodoPreview = {
+  title: 'clean',
+  completed: false
+}
