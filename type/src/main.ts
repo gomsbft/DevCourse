@@ -622,3 +622,83 @@
 // add('1', '2');
 // add('1', 1);
 // add(1, '2');
+
+// type Add1 = (x: number, y: number) => number;
+// type Add2 = (x: string, y: string) => string;
+// type Add = Add1 & Add2;
+// const add: Add = (x: any, y: any) => x + y;
+
+// add(1, 2);
+// add('1', '2');
+// add(1, '2');
+
+
+// function sayS(word: string): string;
+// function sayS(word: string[]): string;
+// function sayS(word: any): any {
+//   if(typeof word === 'string') {
+//     return word
+//   }else if(Array.isArray(word)) {
+//     return word.join("");
+//   }
+//   throw new Error('error');
+// }
+
+// sayS(['hello', 'world']);
+
+
+// enum Level {
+//   NOVICE,
+//   INTERMEDIATE,
+//   ADVANCED,
+//   MASTER
+// }
+// // const a = Level.NOVICE;
+// // const b = Level[Level.NOVICE];
+
+// function yourLevel(level: Level) {
+//   console.log(Level[level])
+// }
+// const myLevel = Level.ADVANCED;
+// yourLevel(myLevel);
+
+
+//infer
+
+// type El<T> = T extends (infer E)[] ? E : never;
+// type Str = El<string[]>;
+// type NumBool = El<(number | boolean)[]>;
+
+// type ElType<T> = T extends (infer E)[] ? E : never;
+// type NumArray = number[];
+// type Ele = ElType<NumArray>
+
+//재귀타입
+
+// type Rec = {
+//   name: string,
+//   children: Rec[]
+// }
+
+// const rec1: Rec = {
+//   name: 'test',
+//   children: []
+// }
+
+// const rec2: Rec = {
+//   name: 'test',
+//   children: [
+//     {name: 'test', children: []}
+//   ]
+// }
+
+//문제
+//removeD 메서드 구현, 배열의 중복된 요소 제거, 중복이 제거된 새로운 배열 반환
+//제네릭 사용하여 다양한 타입의 배열에 대해 작동할 수 있도록 만듦
+
+//나의 답
+function removeD<T, A>(a: T, b: A[]) {
+  return ["string"]
+}
+
+//정답
