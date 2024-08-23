@@ -841,3 +841,25 @@
 // }
 
 // 추상클래스
+
+abstract class Person{
+  name: string;
+  age: number;
+  married: boolean;
+  abstract value: number;
+  constructor(name: string, age: number, married: boolean) {
+    this.name = name;
+    this.age = age;
+    this.married = married;
+  }
+  changeAge(age: number) {
+    this.age = age;
+  }
+  abstract sayAge(): void;
+  abstract sayMarried(): void;
+}
+class RealPerson extends Person {
+  value: number = 0;
+  sayAge(): void {};
+  sayMarried(): void {};
+}
