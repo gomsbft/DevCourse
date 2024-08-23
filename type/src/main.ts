@@ -869,9 +869,9 @@
 // infer 키워드를 사용하여 타입 구현, 튜플의 첫번째 요소 타입을 추출
 
 //정답
-type FirstElement<T> = T extends [infer U, ...any[]] ? U : never;
-type Tuple1 = [string, number, boolean];
-type Fir1 = FirstElement<Tuple1>
+// type FirstElement<T> = T extends [infer U, ...any[]] ? U : never;
+// type Tuple1 = [string, number, boolean];
+// type Fir1 = FirstElement<Tuple1>
 
 //문제
 
@@ -900,3 +900,14 @@ type Fir1 = FirstElement<Tuple1>
 //     return "Woof!"
 //   }
 // }
+
+//partial
+// interface Address {
+//   email: string;
+//   address: string;
+// }
+// const me : Partial<Address> = {};
+// const you: Partial<Address> = {email: 'abc@abc.com'};
+// const all: Address = {email: 'abc@abc.com', address: 'abc'};
+
+//pick
