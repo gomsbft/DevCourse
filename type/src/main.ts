@@ -795,20 +795,49 @@
 
 //오버라이드
 
-class Human {
-  play() {
-    console.log('play');
-  }
-  study() {
-    console.log('study');
-  }
-}
+// class Human {
+//   play() {
+//     console.log('play');
+//   }
+//   study() {
+//     console.log('study');
+//   }
+// }
 
-class Employee extends Human {
-  work() {
-    console.log('work');
-  }
-  override study() {
-    console.log('study');
-  }
-}
+// class Employee extends Human {
+//   work() {
+//     console.log('work');
+//   }
+//   override study() {
+//     console.log('study');
+//   }
+// }
+
+//클래스 인덱스 시그니처
+// class Signature {
+//   [propName: string]: string | number | undefined;
+//   static [propName: string]: boolean;
+// }
+// const sig = new Signature();
+// sig.hello = 'world';
+// Signature.isGood = true;
+
+
+// class Person {
+//   name: string;
+//   age: number;
+//   married: boolean;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.married = married;
+//   }
+//   sayMarried(this: Person) {
+//     console.log(this.married);
+//   }
+//   sayCallback(callback: (this: this) => void) {
+//     callback.call(this);
+//   }
+// }
+
+// 추상클래스
