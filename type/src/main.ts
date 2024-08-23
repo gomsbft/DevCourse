@@ -953,14 +953,28 @@
 //   lastName: 'han'
 // }
 
-interface Cat {
-  age: number;
-  breed: string;
-}
 
-type CatName = 'a' | 'b' | 'c'
-const cats: Record<CatName, Cat> = {
-  a: {age: 10, breed: 'b'},
-  b: {age: 10, breed: 'b'},
-  c: {age: 10, breed: 'b'},
-}
+//Record
+// interface Cat {
+//   age: number;
+//   breed: string;
+// }
+
+// type CatName = 'a' | 'b' | 'c'
+// const cats: Record<CatName, Cat> = {
+//   a: {age: 10, breed: 'b'},
+//   b: {age: 10, breed: 'b'},
+//   c: {age: 10, breed: 'b'},
+// }
+
+//Returntype
+
+// type T0 = ReturnType<() => string>
+// type T1 = ReturnType<(s: string) => void>
+
+// function fn(str: string) {
+//   return str;
+// }
+
+// const a: ReturnType<typeof fn> = "hello"
+// const b: ReturnType<typeof fn> = 123
