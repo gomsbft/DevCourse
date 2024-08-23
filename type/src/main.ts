@@ -937,3 +937,18 @@
 //   title: 'clean',
 //   completed: false
 // }
+
+//Required
+// type User = {
+//   firstName: string;
+//   lastName?: string;
+// }
+
+// const firstUser: User = {
+//   firstName: 'jiwon'
+// }
+
+// const secondUser:Required<User> = {
+//   firstName: 'jiwon',
+//   lastName: 'han'
+// }
