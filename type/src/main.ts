@@ -190,9 +190,9 @@
 // }
 
 //정답
-type Name = string;
-const firstName: Name = "jiwon"
-const lastName: Name = "han"
+// type Name = string;
+// const firstName: Name = "jiwon"
+// const lastName: Name = "han"
 
 
 //문제 2
@@ -207,10 +207,10 @@ const lastName: Name = "han"
 // }
 
 //정답
-type MathO = (a: number, b: number) => number;
+// type MathO = (a: number, b: number) => number;
 
-const add:MathO = (x, y) => x + y;
-const multiply:MathO = (x, y) => x * y;
+// const add:MathO = (x, y) => x + y;
+// const multiply:MathO = (x, y) => x * y;
 
 
 //문제3
@@ -231,18 +231,18 @@ const multiply:MathO = (x, y) => x * y;
 // type radius = Circle['radius'];
 
 //정답
-interface Shape {
-  color: string;
-}
+// interface Shape {
+//   color: string;
+// }
 
-interface Circle extends Shape {
-  radius: number;
-}
+// interface Circle extends Shape {
+//   radius: number;
+// }
 
-const circle: Circle = {
-  color: "red",
-  radius: 2
-}
+// const circle: Circle = {
+//   color: "red",
+//   radius: 2
+// }
 
 //문제 4
 //Animal이라는 인터페이스 정의 name과 age 속성가짐
@@ -266,20 +266,20 @@ const circle: Circle = {
 // }
 
 //정답
-interface Animal {
-  name: string,
-  age: number
-}
+// interface Animal {
+//   name: string,
+//   age: number
+// }
 
-interface Dog extends Animal {
-  breed: string
-}
+// interface Dog extends Animal {
+//   breed: string
+// }
 
-const dog: Dog = {
-  name: "B",
-  age: 2,
-  breed: "G"  
-}
+// const dog: Dog = {
+//   name: "B",
+//   age: 2,
+//   breed: "G"  
+// }
 
 //끝
 
@@ -395,22 +395,22 @@ const dog: Dog = {
 //description 문자열 은 선택적 속성으로 정의 product1 과 product2 객체 선언 및 초기화
 
 //나의 풀이
-interface Product {
-  name: string,
-  price: number,
-  dexcription?: string
-}
+// interface Product {
+//   name: string,
+//   price: number,
+//   dexcription?: string
+// }
 
-const product1:Product = {
-  name: "mini",
-  price: 120
-}
+// const product1:Product = {
+//   name: "mini",
+//   price: 120
+// }
 
-const product2:Product = {
-  name: 'dongdong',
-  price: 80,
-  dexcription: "no"
-}
+// const product2:Product = {
+//   name: 'dongdong',
+//   price: 80,
+//   dexcription: "no"
+// }
 
 //정답
 //나의 풀이와 같음
@@ -551,29 +551,29 @@ const product2:Product = {
 //배열의 첫번째 요소를 반환하는 제네릭 함수를 작성하세요
 
 //정답
-function firstEl<T>(arr: T[]): T {
-  return  arr[0]
-}
-console.log(firstEl([1, 2, 3]))
+// function firstEl<T>(arr: T[]): T {
+//   return  arr[0]
+// }
+// console.log(firstEl([1, 2, 3]))
 
 //문제 8
 //length 속성을 가진 객체만을 받는 제네릭 함수를 작성하세요
 //정답
 
-function leng<T extends {length: number}>(item: T) {
-  console.log(item.length)
-}
-leng('hello');
+// function leng<T extends {length: number}>(item: T) {
+//   console.log(item.length)
+// }
+// leng('hello');
 
 //문제 9
 // 두 값을 받아서 그 중 큰 값을 반환하는 제네릭 함수를 작성하세요
 
 //정답
 
-function big<T extends number>(a: T, b: T): T {
-  return a > b  ? a : b;
-}
-console.log(big(10, 20));
+// function big<T extends number>(a: T, b: T): T {
+//   return a > b  ? a : b;
+// }
+// console.log(big(10, 20));
 
 //문제 10
 // IsString<T> 타입을 구현 T가 string 타입이라면 true 반환 아니면 false 반환
@@ -588,5 +588,37 @@ console.log(big(10, 20));
 // 문제 11
 //StringS<T> 타입을 구현 T가 유니온 타입일 경우 string 타입인 요소만 추출하여 반환
 
-type StringS<T> = T extends string ? T : never;
-type Test1 = StringS<'a' | 1 | true>;
+// type StringS<T> = T extends string ? T : never;
+// type Test1 = StringS<'a' | 1 | true>;
+
+// function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+// function add(a: any, b: any): any{
+//   return a + b;
+// }
+// add("hello", "world");
+// add(1, 2);
+
+
+// function exam(param: string): string;
+// function exam(param: string | null): number;
+// function exam(param: string | null): string | number {
+//   if(param) {
+//     return 'string'
+//   }else {
+//     return 123;
+//   }
+// }
+// const result = exam('what');
+
+// interface Add {
+//   (x: number, y: number): number;
+//   (x: string, y: string): string;
+// }
+
+// const add: Add = (x: any, y: any) => x + y;
+
+// add(1, 2);
+// add('1', '2');
+// add('1', 1);
+// add(1, '2');
