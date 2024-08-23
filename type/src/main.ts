@@ -756,4 +756,22 @@ class Person{
     this.married = married;
     this.value = 0;
   }
+  changeAge(age: number) {
+    this.age = age;
+  }
 }
+class Child extends Person {
+  constructor(name: string, age: number, married: boolean) {
+    super(name, age, married);
+  }
+  sayName() {
+    console.log(this.name);
+  }
+  sayValue() {
+    console.log(this.value);
+  }
+}
+
+const child = new Child("kim", 25, false);
+child.name;
+child.married;
