@@ -842,24 +842,61 @@
 
 // 추상클래스
 
-abstract class Person{
-  name: string;
-  age: number;
-  married: boolean;
-  abstract value: number;
-  constructor(name: string, age: number, married: boolean) {
-    this.name = name;
-    this.age = age;
-    this.married = married;
-  }
-  changeAge(age: number) {
-    this.age = age;
-  }
-  abstract sayAge(): void;
-  abstract sayMarried(): void;
-}
-class RealPerson extends Person {
-  value: number = 0;
-  sayAge(): void {};
-  sayMarried(): void {};
-}
+// abstract class Person{
+//   name: string;
+//   age: number;
+//   married: boolean;
+//   abstract value: number;
+//   constructor(name: string, age: number, married: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.married = married;
+//   }
+//   changeAge(age: number) {
+//     this.age = age;
+//   }
+//   abstract sayAge(): void;
+//   abstract sayMarried(): void;
+// }
+// class RealPerson extends Person {
+//   value: number = 0;
+//   sayAge(): void {};
+//   sayMarried(): void {};
+// }
+
+//문제
+//FirstElement 조건부 타입 정의, 튜플 타입을 인자로 받아, 첫번째 요소의 타입을 추출
+// infer 키워드를 사용하여 타입 구현, 튜플의 첫번째 요소 타입을 추출
+
+//정답
+type FirstElement<T> = T extends [infer U, ...any[]] ? U : never;
+type Tuple1 = [string, number, boolean];
+type Fir1 = FirstElement<Tuple1>
+
+//문제
+
+// class Animal {
+//   private name: string;
+//   protected age: number;
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   getName():string {
+//     return this.name;
+//   }
+//   getAge(): number {
+//     return this.age;
+//   }
+// }
+
+// class Dog extends Animal {
+//   breed: string;
+//   constructor(name: string, age: number, breed: string) {
+//     super (name, age)
+//     this.breed = breed
+//   }
+//   bark(): string {
+//     return "Woof!"
+//   }
+// }
